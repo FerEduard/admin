@@ -2,9 +2,8 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
-
-    <title>Dashboard</title>
+<meta charset="utf-8">
+<title>Dashboard</title>
     <?php include ("inc/libs.php");?>
 </head>
 
@@ -18,7 +17,6 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
