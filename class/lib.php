@@ -1,4 +1,5 @@
 <?php 
+include_once ("co.php");
 class lib{
 	const KEY = 'wux';
 	
@@ -54,6 +55,37 @@ class lib{
 				  </div>';
 				  
 		echo $comp;
+	}
+	
+	public function comboBox($label, $query, $atrib){
+		$comp = '<div class="form-group">
+					<label>'.$label.'</label>
+					<select class="form-control frm" name="'.$this->encriptar($atrib).'" id="'.$this->encriptar($atrib).'"">';
+					
+		try {
+			$co = new Connection();
+			$co = $co->co();
+			$stmt = $co->prepare($query); 
+			$stmt->execute();
+	
+			$result = $stmt->setFetchMode(PDO::FETCH_NUM); 
+			$rows = $stmt->fetchAll();
+			
+			$r = count($rows);
+			
+			for($i = 0; $i < $r; $i++){
+				$comp = $comp.'<option value="'.$rows[$i][0].'">'.$rows[$i][1].'</option>';
+			}
+			
+			$comp = $comp.'</select>
+			</div>';
+			
+			echo $comp;
+		}
+		catch(PDOException $e) {
+			echo '<div class="alert alert-danger" role="alert">Oh! Parece que hay un problema</div>';
+		}
+	
 	}
 }
 ?>

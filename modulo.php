@@ -10,7 +10,7 @@ $comp = new lib();
 
     <meta charset="utf-8">
 
-    <title>Idioma</title>
+    <title>Modulo</title>
     <?php include ("inc/libs.php");?>
 </head>
 
@@ -29,7 +29,7 @@ $comp = new lib();
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Idioma
+                            Modulo
                         </h1>
                     </div>
                 </div>
@@ -37,8 +37,9 @@ $comp = new lib();
 
                 <div class="row">
                     <div class="col-xs-6">
-                        <form id="forma" name="<?php echo $comp->encriptar("idioma") ?>">
-                          	<?php $comp->textField("Código", "Código", "COD_IDIOMA", true)?>
+                        <form id="forma" name="<?php echo $comp->encriptar("modulo") ?>">
+                          	<?php $comp->textField("Código", "Código", "COD_MODULO", true)?>
+                            <?php $comp->comboBox("Grupo","SELECT COD_GRUPO, DESCRIPCION FROM grupo ORDER BY ORDEN","COD_LECCION");?>
 							<?php $comp->textField("Descripción", "Descripción", "DESCRIPCION")?>
                           <button type="button" id="guardar" class="btn btn-default">Guardar</button>
                           <button type="button" id="limpiar" class="btn btn-default">Limpiar</button>

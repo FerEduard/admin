@@ -15,16 +15,16 @@
                                 <a href="idioma.php">Idioma</a>
                             </li>
                             <li>
-                                <a href="#">Grupos</a>
+                                <a href="grupo.php">Grupos</a>
                             </li>
                             <li>
-                                <a href="#">Modulos</a>
+                                <a href="modulo.php">Modulos</a>
                             </li>
                             <li>
-                                <a href="#">Lección</a>
+                                <a href="leccion.php">Lección</a>
                             </li>
                             <li>
-                                <a href="#">Sección</a>
+                                <a href="seccion.php">Sección</a>
                             </li>
                         </ul>
                     </li>

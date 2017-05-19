@@ -3,3 +3,4 @@
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/sql.js"></script>

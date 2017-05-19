@@ -10,8 +10,8 @@ $comp = new lib();
 
     <meta charset="utf-8">
 
-    <title>Idioma</title>
-    <?php include ("inc/libs.php");?>
+    <title>Sección</title>
+    <?php include ("inc/libs.php");?>	
 </head>
 
 <body>
@@ -29,7 +29,7 @@ $comp = new lib();
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Idioma
+                            Sección
                         </h1>
                     </div>
                 </div>
@@ -37,9 +37,15 @@ $comp = new lib();
 
                 <div class="row">
                     <div class="col-xs-6">
-                        <form id="forma" name="<?php echo $comp->encriptar("idioma") ?>">
-                          	<?php $comp->textField("Código", "Código", "COD_IDIOMA", true)?>
-							<?php $comp->textField("Descripción", "Descripción", "DESCRIPCION")?>
+                        <form id="forma" name="<?php echo $comp->encriptar("seccion") ?>">
+                          	<?php $comp->textField("Código", "Código", "COD_SECCION", true)?>
+                            <?php $comp->comboBox("Idioma","SELECT COD_IDIOMA, DESCRIPCION FROM idioma","COD_IDIOMA");?>
+                            <?php $comp->comboBox("Lección","SELECT COD_LECCION, TITULO FROM leccion ORDER BY ORDEN","COD_LECCION");?>
+							<?php $comp->textField("Expresión", "Expresión", "EXPRESION")?>
+                            <?php $comp->textField("Traducción", "Traducción", "TRADUCCION")?>
+                            <?php $comp->textField("Imagen", "Path imagen", "IMG1")?>
+                            <?php $comp->textField("Imagen", "Path imagen", "IMG2")?>
+                            <?php $comp->textField("Audio", "Path audio", "AUDIO")?>
                           <button type="button" id="guardar" class="btn btn-default">Guardar</button>
                           <button type="button" id="limpiar" class="btn btn-default">Limpiar</button>
                         </form>
