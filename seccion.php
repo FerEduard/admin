@@ -40,7 +40,7 @@ $comp = new lib();
                         <form id="forma" name="<?php echo $comp->encriptar("seccion") ?>">
                           	<?php $comp->textField("Código", "Código", "COD_SECCION", true)?>
                             <?php $comp->comboBox("Idioma","SELECT COD_IDIOMA, DESCRIPCION FROM idioma","COD_IDIOMA");?>
-                            <?php $comp->comboBox("Lección","SELECT COD_LECCION, TITULO FROM leccion ORDER BY ORDEN","COD_LECCION");?>
+                            <?php $comp->comboBox("Lección","SELECT l.COD_LECCION, CONCAT( m.DESCRIPCION, CONCAT(' - ',l.TITULO)) TITULO FROM leccion l INNER JOIN modulo m on m.COD_MODULO = l.COD_MODULO ORDER BY COD_LECCION, ORDEN","COD_LECCION");?>
 							<?php $comp->textField("Expresión", "Expresión", "EXPRESION")?>
                             <?php $comp->textField("Traducción", "Traducción", "TRADUCCION")?>
                             <?php $comp->textField("Imagen", "Path imagen", "IMG1")?>

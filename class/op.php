@@ -65,7 +65,8 @@ class Operaciones{
 			$val = $this->select($tabla, $atributos);
 			return $val;
 		}catch(PDOException $e){
-			$val['mensaje'] = "No fue posible insertar el registro.";
+			//$val['mensaje'] = "No fue posible insertar el registro.";
+			$val['mensaje'] = $query;
 			return $val;
 		}
 	}

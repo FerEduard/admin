@@ -39,7 +39,7 @@ $comp = new lib();
                     <div class="col-xs-6">
                         <form id="forma" name="<?php echo $comp->encriptar("modulo") ?>">
                           	<?php $comp->textField("Código", "Código", "COD_MODULO", true)?>
-                            <?php $comp->comboBox("Grupo","SELECT COD_GRUPO, DESCRIPCION FROM grupo ORDER BY ORDEN","COD_LECCION");?>
+                            <?php $comp->comboBox("Grupo","SELECT COD_GRUPO, DESCRIPCION FROM grupo ORDER BY ORDEN","COD_GRUPO");?>
 							<?php $comp->textField("Descripción", "Descripción", "DESCRIPCION")?>
                           <button type="button" id="guardar" class="btn btn-default">Guardar</button>
                           <button type="button" id="limpiar" class="btn btn-default">Limpiar</button>
