@@ -46,6 +46,7 @@ $comp = new lib();
                             <?php $comp->textField("Imagen", "Path imagen", "IMG1")?>
                             <?php $comp->textField("Imagen", "Path imagen", "IMG2")?>
                             <?php $comp->textField("Audio", "Path audio", "AUDIO")?>
+                            <?php $comp->textField("Reconocimiento", "Voz", "REC")?>
                           <button type="button" id="guardar" class="btn btn-default">Guardar</button>
                           <button type="button" id="limpiar" class="btn btn-default">Limpiar</button>
                         </form>
